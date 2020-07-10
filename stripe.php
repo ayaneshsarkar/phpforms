@@ -25,6 +25,7 @@
   </div>
 </section>
 
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 <script src="https://js.stripe.com/v3/"></script>
 <script src="./js/script.js"></script>
 <?php require_once("./includes/footer.php"); ?>
