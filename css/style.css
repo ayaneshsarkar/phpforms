@@ -224,3 +224,26 @@ input {
   display: block;
   width: 100%;
 }
+
+.StripeElement {
+  display: block;
+  height: 5rem;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: var(--item-font-size);
+  padding: 1.5rem 2rem;
+  border: var(--primary-border);
+  transition: var(--main-transition);
+}
+
+.StripeElement--focus {
+  border: var(--primary-border-dark);
+}
+
+.StripeElement--invalid {
+  border-color: var(--danger-color);
+}
+
+#card-errors {
+  color: var(--danger-color);
+}
