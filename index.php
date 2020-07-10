@@ -6,7 +6,7 @@
   <section id="form">
     <div class="container">
       <h3 class="form_heading">Please Fill Out This Form</h3>
-      <?php //(!empty($errors)) ? var_dump($errors) : ''; ?>
+      
       <form action="/" method="POST" class="index_form">
         
         <!-- Firstname -->
