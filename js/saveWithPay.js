@@ -56,7 +56,10 @@ form.addEventListener('submit', function(e) {
         console.log(result.error.message);
       } else {
         if (result.paymentIntent.status === 'succeeded') {
-          console.log('Yes!');
+          swal("Done!", "You just made the payment.", "success");
+          setTimeout(function() {
+            window.location.href = '/savewithpay';
+          }, 1000);
           // Show a success message to your customer
           // There's a risk of the customer closing the window before callback execution
           // Set up a webhook or plugin to listen for the payment_intent.succeeded event
