@@ -4,4 +4,6 @@ RewriteRule ^/?$ /index.php
 RewriteRule ^stripe?$ /stripe.php
 RewriteRule ^charge?$ /charge.php
 
-RewriteRule ^secret?$ /secret.php
+RewriteRule ^savepaysecret?$ /secrets/secretPayWithSave.php
+
+RewriteRule ^savewithpay?$ /save/saveWithPay.php
