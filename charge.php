@@ -10,9 +10,9 @@
   $intent = \Stripe\PaymentIntent::create([
 
     'payment_method' => $token->token,
-    'amount' => 700000,
+    'amount' => 100,
     'currency' => 'inr',
-    'confirmation_method' => 'manual', 
+    'confirmation_method' => 'manual',
     'confirm' => true
 
   ]);
@@ -26,7 +26,7 @@
       ]);
     } elseif($intent->status == 'succeeded') {
       echo json_encode([
-        'success' => true,
+        'success' => true, 'intent' => $intent
       ]);
     } else {
       http_response_code(500);
@@ -38,3 +38,4 @@
   }
 
   generatePaymentResponse($intent);
+  

@@ -6,12 +6,12 @@ var style = {
   base: {
     color: "#212121",
     fontSize: "16px",
-    fontFamily: 'inherit',
+    fontFamily: '"Montserrat", sans-serif',
     fontWeight: '400',
 
     '::placeholder': {
       color: '#757575',
-      fontFamily: 'inherit',
+      fontFamily: '"Montserrat", sans-serif',
       fontWeight: '400'
     }
   }
@@ -39,7 +39,7 @@ function handleServerResponse(response) {
     console.log(response);
     swal("Done!", "You just made the payment.", "success");
     setTimeout(function() {
-      window.location.href = '/';
+      window.location.href = '/stripe';
     }, 1000);
   }
 
