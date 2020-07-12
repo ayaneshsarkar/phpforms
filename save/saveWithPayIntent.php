@@ -12,7 +12,9 @@ Stripe::setApiKey('sk_test_51Fw26JAr15mea9Q2aWUoWtLctCOhsZRrkZgcreOsloDi0l6WKuHo
   class Payment {
 
     protected function getCustomer() {
-      return Customer::create();
+      return Customer::create([
+        'email' => 'ayaneshsarkar101@gmail.com'
+      ]);
     }
 
     public function intent() {
@@ -23,7 +25,7 @@ Stripe::setApiKey('sk_test_51Fw26JAr15mea9Q2aWUoWtLctCOhsZRrkZgcreOsloDi0l6WKuHo
       return PaymentIntent::create([
         'amount' => $amount,
         'currency' => 'inr',
-        'customer' => $this->getCustomer()
+        'customer' => $this->getCustomer()->id
       ]);
 
     }

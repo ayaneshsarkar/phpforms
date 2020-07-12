@@ -28,3 +28,29 @@
 <script src="https://js.stripe.com/v3/"></script>
 <script src="../js/saveWithPay.js"></script>
 <?php require_once($_SERVER['DOCUMENT_ROOT'] . "/includes/footer.php"); ?>
+
+<?php require_once($_SERVER['DOCUMENT_ROOT'] . '/vendor/autoload.php'); 
+
+\Stripe\Stripe::setApiKey('sk_test_51Fw26JAr15mea9Q2aWUoWtLctCOhsZRrkZgcreOsloDi0l6WKuHoCIlZAwFrPxEecnVz6XvvuRdUqbFfqsq8KblQ00aKdZjRVs');
+
+$payment = \Stripe\Customer::all();
+//cus_HdOrBJOvRGrALY
+
+function searchId(){
+  $payment = \Stripe\Customer::all();
+ foreach($payment->data as $data) {
+  if(!empty($data['id']) && $data['id'] == 'cus_HdOrBJOvRGrALY') {
+    return 'TRUE';
+  }
+
+  return 'FALSE';
+ } 
+
+}
+
+
+echo "<pre class='container' style='font-size: 2rem'>";
+print_r(searchId());
+echo "</pre>";
+
+
