@@ -4,6 +4,9 @@ RewriteRule ^/?$ /index.php
 RewriteRule ^stripe?$ /stripe.php
 RewriteRule ^charge?$ /charge.php
 
+RewriteRule ^login?$ /login.php
+RewriteRule ^logout?$ /backend/controllers/LogoutController.php
+
 RewriteRule ^savepaysecret?$ /secrets/secretPayWithSave.php
 
 RewriteRule ^savewithpay?$ /save/saveWithPay.php
